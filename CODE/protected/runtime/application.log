@@ -61,3 +61,171 @@ REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/
 in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Image.php (160)
 in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Product.php (105)
 in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\views\site\home.php (13)
+2012/06/04 06:55:34 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'category' in 'where clause'. The SQL statement executed was: SELECT * FROM `tbl_setting` `t` WHERE (name=:ycp1) AND (category=:ycp2) LIMIT 1.
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Setting.php (89)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (50)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/04 06:55:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand không thể thi hành câu truy vấn SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'category' in 'where clause'. The SQL statement executed was: SELECT * FROM `tbl_setting` `t` WHERE (name=:ycp1) AND (category=:ycp2) LIMIT 1' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Setting.php(89): CActiveRecord->find(Object(CDbCriteria))
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php(50): Setting::s('SIZE_REMARK_PRO...', 'Product')
+#5 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\actions\CInlineAction.php(50): SiteController->actionHome()
+#6 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('home')
+#10 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#11 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#13 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/
+---
+2012/06/04 06:57:18 [error] [php] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: No such file or directory (C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Image.php:160)
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\views\site\home.php(13): Product->getThumb_url()
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(127): require()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(870): SiteController->renderFile()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(783): SiteController->renderPartial()
+#5 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php(59): SiteController->render()
+#6 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\actions\CInlineAction.php(50): SiteController->actionHome()
+#7 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(309): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(287): SiteController->runAction()
+#9 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#10 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): SiteController->run()
+#11 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#12 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CWebApplication->run()
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Image.php (160)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Product.php (105)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\views\site\home.php (13)
+2012/06/04 06:59:40 [error] [php] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: No such file or directory (C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Image.php:160)
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\views\site\home.php(13): Product->getThumb_url()
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(127): require()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(870): SiteController->renderFile()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(783): SiteController->renderPartial()
+#5 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php(59): SiteController->render()
+#6 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\actions\CInlineAction.php(50): SiteController->actionHome()
+#7 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(309): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(287): SiteController->runAction()
+#9 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#10 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): SiteController->run()
+#11 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#12 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CWebApplication->run()
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Image.php (160)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Product.php (105)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\views\site\home.php (13)
+2012/06/04 07:09:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "upload/2012/05/16/introimage/Koala-30.jpg".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('upload/2012/05/...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/upload/2012/05/16/introimage/Koala-30.jpg
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/
+---
+2012/06/04 07:09:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "upload/2012/05/16/introimage/Chrysanthemum-70.jpg".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('upload/2012/05/...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/upload/2012/05/16/introimage/Chrysanthemum-70.jpg
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/
+---
+2012/06/04 07:09:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "upload/2012/05/17/introimage/Koala.jpg".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('upload/2012/05/...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/upload/2012/05/17/introimage/Koala.jpg
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/
+---
+2012/06/04 07:09:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/front/chart_bar.png".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('images/front/ch...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/images/front/chart_bar.png
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/
+---
+2012/06/04 07:11:28 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Trong nhóm Systemkhông tồn tại tham số cấu hình DEFAULT_PAGE_SIZE' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Setting.php:101
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\News.php(552): Setting::s('DEFAULT_PAGE_SI...', 'System')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\views\news\index.php(97): News->search()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\controllers\NewsController.php(250): CController->render('index', Array)
+#7 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\actions\CInlineAction.php(50): NewsController->actionIndex()
+#8 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('index')
+#17 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/news/inde...')
+#18 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#20 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/news/index
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/default/login
+---
+2012/06/04 07:12:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "css".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('css')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/news/css/...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/news/css/common/jquery.alerts.css
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/news/create
+---
+2012/06/04 07:12:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('js')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('js')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/news/js/c...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/news/js/common/jquery.alerts.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/news/create
+---
+2012/06/04 07:12:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "css".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('css')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/news/css/...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/news/css/common/jquery.alerts.css
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/news/create
+---
+2012/06/04 07:12:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('js')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('js')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/news/js/c...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/news/js/common/jquery.alerts.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/news/create
+---
