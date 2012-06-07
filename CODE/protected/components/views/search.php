@@ -1,4 +1,4 @@
-<div class="search-product">
+			<div class="search-product">
             	<label>Tùy chọn</label>
             	<?php $form=$this->beginWidget('CActiveForm', array('method'=>'post','enableAjaxValidation'=>false,'action'=>Yii::app()->createUrl('search/product'))); ?>	
                 <?php echo $form->textField($search,'name'); ?>	

@@ -1,231 +1,1100 @@
-2012/06/04 06:43:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection không thể mở kết nối DB: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\db\CDbConnection.php:382
-Stack trace:
-#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\db\CDbConnection.php(331): CDbConnection->open()
-#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
-#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CModule.php(388): CDbConnection->init()
-#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(431): CModule->getComponent('db')
-#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\db\ar\CActiveRecord.php(615): CApplication->getDb()
-#5 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\db\ar\CActiveRecord.php(2263): CActiveRecord->getDbConnection()
-#6 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Setting))
-#7 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Setting.php(19): CActiveRecord::model('Setting')
-#8 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Setting.php(89): Setting::model()
-#9 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php(50): Setting::s('SIZE_REMARK_PRO...', 'Product')
-#10 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\actions\CInlineAction.php(50): SiteController->actionHome()
-#11 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#12 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#13 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#14 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('home')
-#15 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('')
-#16 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#17 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
-#18 {main}
-REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/
----
-2012/06/04 06:45:22 [error] [php] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: No such file or directory (C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Image.php:160)
-Stack trace:
-#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\views\site\home.php(13): Product->getThumb_url()
-#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(127): require()
-#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(96): SiteController->renderInternal()
-#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(870): SiteController->renderFile()
-#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(783): SiteController->renderPartial()
-#5 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php(59): SiteController->render()
-#6 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\actions\CInlineAction.php(50): SiteController->actionHome()
-#7 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(309): CInlineAction->runWithParams()
-#8 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(287): SiteController->runAction()
-#9 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(266): SiteController->runActionWithFilters()
-#10 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): SiteController->run()
-#11 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#12 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#13 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CWebApplication->run()
-REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/
-in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Image.php (160)
-in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Product.php (105)
-in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\views\site\home.php (13)
-2012/06/04 06:48:17 [error] [php] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: No such file or directory (C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Image.php:160)
-Stack trace:
-#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\views\site\home.php(13): Product->getThumb_url()
-#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(127): require()
-#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(96): SiteController->renderInternal()
-#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(870): SiteController->renderFile()
-#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(783): SiteController->renderPartial()
-#5 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php(59): SiteController->render()
-#6 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\actions\CInlineAction.php(50): SiteController->actionHome()
-#7 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(309): CInlineAction->runWithParams()
-#8 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(287): SiteController->runAction()
-#9 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(266): SiteController->runActionWithFilters()
-#10 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): SiteController->run()
-#11 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#12 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#13 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CWebApplication->run()
-REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/
-in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Image.php (160)
-in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Product.php (105)
-in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\views\site\home.php (13)
-2012/06/04 06:55:34 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'category' in 'where clause'. The SQL statement executed was: SELECT * FROM `tbl_setting` `t` WHERE (name=:ycp1) AND (category=:ycp2) LIMIT 1.
-in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Setting.php (89)
-in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (50)
+2012/06/07 06:05:38 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
 in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
-2012/06/04 06:55:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand không thể thi hành câu truy vấn SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'category' in 'where clause'. The SQL statement executed was: SELECT * FROM `tbl_setting` `t` WHERE (name=:ycp1) AND (category=:ycp2) LIMIT 1' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\db\CDbCommand.php:528
+2012/06/07 06:05:38 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:05:38 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:05:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
 Stack trace:
-#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
-#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
-#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
-#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Setting.php(89): CActiveRecord->find(Object(CDbCriteria))
-#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php(50): Setting::s('SIZE_REMARK_PRO...', 'Product')
-#5 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\actions\CInlineAction.php(50): SiteController->actionHome()
-#6 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#7 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#8 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#9 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('home')
-#10 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('')
-#11 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#12 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
-#13 {main}
-REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/
----
-2012/06/04 06:57:18 [error] [php] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: No such file or directory (C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Image.php:160)
-Stack trace:
-#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\views\site\home.php(13): Product->getThumb_url()
-#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(127): require()
-#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(96): SiteController->renderInternal()
-#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(870): SiteController->renderFile()
-#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(783): SiteController->renderPartial()
-#5 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php(59): SiteController->render()
-#6 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\actions\CInlineAction.php(50): SiteController->actionHome()
-#7 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(309): CInlineAction->runWithParams()
-#8 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(287): SiteController->runAction()
-#9 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(266): SiteController->runActionWithFilters()
-#10 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): SiteController->run()
-#11 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#12 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#13 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CWebApplication->run()
-REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/
-in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Image.php (160)
-in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Product.php (105)
-in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\views\site\home.php (13)
-2012/06/04 06:59:40 [error] [php] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: No such file or directory (C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Image.php:160)
-Stack trace:
-#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\views\site\home.php(13): Product->getThumb_url()
-#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(127): require()
-#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(96): SiteController->renderInternal()
-#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(870): SiteController->renderFile()
-#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(783): SiteController->renderPartial()
-#5 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php(59): SiteController->render()
-#6 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\actions\CInlineAction.php(50): SiteController->actionHome()
-#7 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(309): CInlineAction->runWithParams()
-#8 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(287): SiteController->runAction()
-#9 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(266): SiteController->runActionWithFilters()
-#10 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): SiteController->run()
-#11 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#12 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#13 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CWebApplication->run()
-REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/
-in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Image.php (160)
-in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Product.php (105)
-in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\views\site\home.php (13)
-2012/06/04 07:09:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "upload/2012/05/16/introimage/Koala-30.jpg".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('upload/2012/05/...')
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
 #1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
 #3 {main}
-REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/upload/2012/05/16/introimage/Koala-30.jpg
-HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
 ---
-2012/06/04 07:09:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "upload/2012/05/16/introimage/Chrysanthemum-70.jpg".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+2012/06/07 06:06:00 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:06:00 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:06:00 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:06:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
 Stack trace:
-#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('upload/2012/05/...')
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
 #1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
 #3 {main}
-REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/upload/2012/05/16/introimage/Chrysanthemum-70.jpg
-HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
 ---
-2012/06/04 07:09:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "upload/2012/05/17/introimage/Koala.jpg".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+2012/06/07 06:09:23 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:09:23 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:09:23 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:09:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
 Stack trace:
-#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('upload/2012/05/...')
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
 #1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
 #3 {main}
-REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/upload/2012/05/17/introimage/Koala.jpg
-HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
 ---
-2012/06/04 07:09:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/front/chart_bar.png".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+2012/06/07 06:09:40 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:09:40 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:09:40 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:09:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
 Stack trace:
-#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('images/front/ch...')
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
 #1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
 #3 {main}
-REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/images/front/chart_bar.png
-HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
 ---
-2012/06/04 07:11:28 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Trong nhóm Systemkhông tồn tại tham số cấu hình DEFAULT_PAGE_SIZE' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Setting.php:101
+2012/06/07 06:16:05 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:16:05 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:16:05 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:16:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
 Stack trace:
-#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\News.php(552): Setting::s('DEFAULT_PAGE_SI...', 'System')
-#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\views\news\index.php(97): News->search()
-#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
-#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
-#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
-#5 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
-#6 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\controllers\NewsController.php(250): CController->render('index', Array)
-#7 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\actions\CInlineAction.php(50): NewsController->actionIndex()
-#8 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#9 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
-#10 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#11 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
-#12 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
-#13 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#14 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(292): CFilterChain->run()
-#15 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#16 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('index')
-#17 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/news/inde...')
-#18 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#19 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
-#20 {main}
-REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/news/index
-HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/default/login
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
 ---
-2012/06/04 07:12:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "css".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+2012/06/07 06:18:23 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:18:23 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:18:23 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:18:23 [error] [php] Undefined index: minute (C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php:23)
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CWebApplication->run()
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/trang-chu
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (23)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:18:34 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:18:34 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:18:34 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:18:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 06:19:16 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:19:16 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:19:16 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:19:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 06:19:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "css".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
 Stack trace:
 #0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('css')
 #1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('css')
-#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/news/css/...')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/css...')
 #3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
 #5 {main}
-REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/news/css/common/jquery.alerts.css
-HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/news/create
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/css/common/jquery.alerts.css
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
 ---
-2012/06/04 07:12:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+2012/06/07 06:19:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
 Stack trace:
 #0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('js')
 #1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('js')
-#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/news/js/c...')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/js/...')
 #3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
 #5 {main}
-REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/news/js/common/jquery.alerts.js
-HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/news/create
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/js/common/jquery.alerts.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
 ---
-2012/06/04 07:12:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "css".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+2012/06/07 06:21:16 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:21:16 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:21:16 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:21:16 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Language.php:58)
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CWebApplication->run()
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/trang-chu
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Language.php (58)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (27)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:21:58 [error] [php] Undefined variable: content (C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php:71)
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php(135): Order->__get()
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CComponent.php(607) : eval()'d code(1): Order->__get()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CComponent.php(607): eval()
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\zii\widgets\grid\CDataColumn.php(139): CDataColumn->evaluateExpression()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\zii\widgets\grid\CGridColumn.php(138): CDataColumn->renderDataCellContent()
+#5 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\zii\widgets\grid\CGridView.php(517): CDataColumn->renderDataCell()
+#6 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\zii\widgets\grid\CGridView.php(490): iPhoenixGridView->renderTableRow()
+#7 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\zii\widgets\grid\CGridView.php(400): iPhoenixGridView->renderTableBody()
+#8 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\zii\widgets\CBaseListView.php(158): iPhoenixGridView->renderItems()
+#9 unknown(0): iPhoenixGridView->renderSection()
+#10 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback()
+#11 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\zii\widgets\CBaseListView.php(126): iPhoenixGridView->renderContent()
+#12 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(174): iPhoenixGridView->run()
+#13 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\views\order\index.php(178): OrderController->widget()
+#14 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(127): require()
+#15 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(96): OrderController->renderInternal()
+#16 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(870): OrderController->renderFile()
+#17 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(783): OrderController->renderPartial()
+#18 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\controllers\OrderController.php(115): OrderController->render()
+#19 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\actions\CInlineAction.php(50): OrderController->actionIndex()
+#20 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(309): CInlineAction->runWithParams()
+#21 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\filters\CFilterChain.php(134): OrderController->runAction()
+#22 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#23 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#24 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\filters\CInlineFilter.php(59): OrderController->filterAccessControl()
+#25 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#26 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(292): CFilterChain->run()
+#27 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(266): OrderController->runActionWithFilters()
+#28 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): OrderController->run()
+#29 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#30 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#31 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CWebApplication->run()
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/index
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (71)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (135)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\views\order\index.php (178)
+2012/06/07 06:23:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "css".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
 Stack trace:
 #0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('css')
 #1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('css')
-#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/news/css/...')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/css...')
 #3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
 #5 {main}
-REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/news/css/common/jquery.alerts.css
-HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/news/create
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/css/common/jquery.alerts.css
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
 ---
-2012/06/04 07:12:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+2012/06/07 06:23:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
 Stack trace:
 #0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('js')
 #1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('js')
-#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/news/js/c...')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/js/...')
 #3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
 #5 {main}
-REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/news/js/common/jquery.alerts.js
-HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/news/create
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/js/common/jquery.alerts.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:24:28 [error] [php] A non well formed numeric value encountered (C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CComponent.php(607) : eval()'d code:1)
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\zii\widgets\grid\CDataColumn.php(139): CDataColumn->evaluateExpression()
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\zii\widgets\grid\CGridColumn.php(138): CDataColumn->renderDataCellContent()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\zii\widgets\grid\CGridView.php(517): CDataColumn->renderDataCell()
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\zii\widgets\grid\CGridView.php(490): iPhoenixGridView->renderTableRow()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\zii\widgets\grid\CGridView.php(400): iPhoenixGridView->renderTableBody()
+#5 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\zii\widgets\CBaseListView.php(158): iPhoenixGridView->renderItems()
+#6 unknown(0): iPhoenixGridView->renderSection()
+#7 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback()
+#8 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\zii\widgets\CBaseListView.php(126): iPhoenixGridView->renderContent()
+#9 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(174): iPhoenixGridView->run()
+#10 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\views\order\index.php(171): OrderController->widget()
+#11 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(127): require()
+#12 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(96): OrderController->renderInternal()
+#13 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(870): OrderController->renderFile()
+#14 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(783): OrderController->renderPartial()
+#15 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\controllers\OrderController.php(115): OrderController->render()
+#16 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\actions\CInlineAction.php(50): OrderController->actionIndex()
+#17 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(309): CInlineAction->runWithParams()
+#18 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\filters\CFilterChain.php(134): OrderController->runAction()
+#19 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#21 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\filters\CInlineFilter.php(59): OrderController->filterAccessControl()
+#22 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#23 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(266): OrderController->runActionWithFilters()
+#25 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): OrderController->run()
+#26 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#27 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CWebApplication->run()
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/index
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\views\order\index.php (171)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\controllers\OrderController.php (115)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:25:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "css".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('css')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/css...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/css/common/jquery.alerts.css
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:25:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('js')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('js')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/js/...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/js/common/jquery.alerts.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:26:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "css".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('css')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/css...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/css/common/jquery.alerts.css
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:26:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('js')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('js')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/js/...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/js/common/jquery.alerts.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:26:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "css".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('css')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/css...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/css/common/jquery.alerts.css
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:26:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('js')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('js')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/js/...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/js/common/jquery.alerts.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:26:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "css".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('css')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/css...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/css/common/jquery.alerts.css
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:26:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('js')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('js')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/js/...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/js/common/jquery.alerts.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('js')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('js')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/js/...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/js/common/jquery.alerts.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "css".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('css')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/css...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/css/common/jquery.alerts.css
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:28:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('js')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('js')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/js/...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/js/common/jquery.alerts.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:28:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "css".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('css')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/css...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/css/common/jquery.alerts.css
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:32:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 06:33:45 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:33:45 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:33:45 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:33:45 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Language.php:58)
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CWebApplication->run()
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/trang-chu
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Language.php (58)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (28)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:33:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "css".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('css')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/css...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/css/common/jquery.alerts.css
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:33:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('js')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('js')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/js/...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/js/common/jquery.alerts.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:34:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "css".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('css')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/css...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/css/common/jquery.alerts.css
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:34:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('js')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('js')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/js/...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/js/common/jquery.alerts.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:38:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 06:38:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 06:41:16 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:41:16 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:41:16 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (20)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:41:16 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Language.php:58)
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CWebApplication->run()
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/trang-chu
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Language.php (58)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (27)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:41:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('js')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('js')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/js/...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/js/common/jquery.alerts.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:41:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "css".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('css')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/css...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/css/common/jquery.alerts.css
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:42:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "css".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('css')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/css...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/css/common/jquery.alerts.css
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:42:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('js')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('js')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/js/...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/js/common/jquery.alerts.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:45:31 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:45:31 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:45:31 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:45:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 06:45:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "css".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('css')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/css...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/css/common/jquery.alerts.css
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:45:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('js')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('js')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/js/...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/js/common/jquery.alerts.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:45:52 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:45:52 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:45:52 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:45:52 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Language.php:58)
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CWebApplication->run()
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/trang-chu
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Language.php (58)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (26)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:45:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "css".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('css')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/css...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/css/common/jquery.alerts.css
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:45:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('js')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('js')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/js/...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/js/common/jquery.alerts.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:48:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 06:48:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/lien-he
+---
+2012/06/07 06:49:00 [warning] [application] Failed to set unsafe attribute "address" of "Contact".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Contact.php (78)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (49)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:49:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/lien-he
+---
+2012/06/07 06:49:55 [warning] [application] Failed to set unsafe attribute "address" of "Contact".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Contact.php (78)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (49)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:49:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/lien-he
+---
+2012/06/07 06:51:56 [error] [php] Undefined index: Order (C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\components\views\book-online.php:80)
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\widgets\CWidget.php(244): wBookOnline->renderFile()
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\components\wBookOnline.php(11): wBookOnline->render()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\zii\widgets\CPortlet.php(95): wBookOnline->renderContent()
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(174): wBookOnline->run()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\views\layouts\main.php(62): SiteController->widget()
+#5 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(127): require()
+#6 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#7 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(785): SiteController->renderFile()
+#8 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php(73): SiteController->render()
+#9 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\actions\CInlineAction.php(50): SiteController->actionHome()
+#10 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(287): SiteController->runAction()
+#12 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#13 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): SiteController->run()
+#14 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#15 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CWebApplication->run()
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/trang-chu
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\components\views\book-online.php (80)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\components\wBookOnline.php (11)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\views\layouts\main.php (62)
+2012/06/07 06:53:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 06:53:34 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:53:34 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:53:34 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:53:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 06:54:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('js')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('js')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/js/...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/js/common/jquery.alerts.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:54:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "css".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('css')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/css...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/css/common/jquery.alerts.css
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:54:35 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:54:35 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:54:35 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:54:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/lien-he
+---
+2012/06/07 06:54:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "css".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('css')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/css...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/css/common/jquery.alerts.css
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:54:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('js')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('js')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/js/...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/js/common/jquery.alerts.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:56:57 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:56:57 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:56:57 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:56:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/lien-he
+---
+2012/06/07 06:57:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "css".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('css')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/css...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/css/common/jquery.alerts.css
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:57:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CController.php(271): CController->missingAction('js')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(276): CController->run('js')
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/order/js/...')
+#3 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/admin/order/js/common/jquery.alerts.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/admin/order/index
+---
+2012/06/07 06:57:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 06:57:36 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:57:36 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:57:36 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:57:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 06:58:54 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:58:54 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:58:54 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:58:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 06:59:41 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:59:41 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:59:41 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 06:59:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 07:00:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 07:01:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 07:02:02 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 07:02:02 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 07:02:02 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 07:02:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 07:02:16 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 07:02:16 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 07:02:16 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 07:02:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 07:02:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/list-tin-tuc/danh-muc-1
+---
+2012/06/07 07:02:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 07:03:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 07:04:04 [warning] [application] Failed to set unsafe attribute "date" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 07:04:04 [warning] [application] Failed to set unsafe attribute "hour" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 07:04:04 [warning] [application] Failed to set unsafe attribute "min" of "Order".
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\modules\admin\models\Order.php (119)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\protected\controllers\SiteController.php (21)
+in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php (12)
+2012/06/07 07:04:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 07:05:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 07:06:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
+---
+2012/06/07 07:06:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/lien-he
+---
+2012/06/07 07:06:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "assets/70bb1307/js/i18n/ui.datepicker-en.js".' in C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/70bb1307...')
+#1 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\RELEASE_PROJECT\KCB\CODE\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/RELEASE_PROJECT/KCB/CODE/assets/70bb1307/js/i18n/ui.datepicker-en.js
+HTTP_REFERER=http://localhost/RELEASE_PROJECT/KCB/CODE/trang-chu
 ---

@@ -9,9 +9,17 @@ $cs->registerCssFile(Yii::app()->request->getBaseUrl(true).'/css/admin/sprite.cs
 			<h1>
 			<?php 
 			switch ($group){
-				case Category::GROUP_ADMIN_MENU: echo "Danh mục menu trang quản trị";
+				case Category::GROUP_ADMIN_MENU: echo "Menu trang quản trị";
 				break;
-				case Category::GROUP_USER_MENU: echo 'Danh mục menu trang frontend';
+				case Category::GROUP_USER_TOP_MENU: echo 'Top menu trang chủ';
+				break;
+				case Category::GROUP_USER_MAIN_MENU: echo 'Main menu trang chủ';
+				break;
+				case Category::GROUP_USER_LEFT_MENU: echo 'Left menu trang chủ';
+				break;
+				case Category::GROUP_USER_FOOTER_MENU: echo 'Footer menu trang chủ';
+				break;
+				case Category::GROUP_USER_DISEASE: echo 'Danh mục nhóm bệnh và bác sĩ';
 				break;
 				case Category::GROUP_ROOT: echo "Danh mục gốc";
 				break;
@@ -38,9 +46,17 @@ $cs->registerCssFile(Yii::app()->request->getBaseUrl(true).'/css/admin/sprite.cs
 					<li><a class="header-menu-active new-icon" href=""><span>
 			<?php 
 			switch ($group){
-					case Category::GROUP_ADMIN_MENU: echo "Danh mục menu trang quản trị";
+				case Category::GROUP_ADMIN_MENU: echo "Menu trang quản trị";
 				break;
-				case Category::GROUP_USER_MENU: echo 'Danh mục menu trang frontend';
+				case Category::GROUP_USER_TOP_MENU: echo 'Top menu trang chủ';
+				break;
+				case Category::GROUP_USER_MAIN_MENU: echo 'Main menu trang chủ';
+				break;
+				case Category::GROUP_USER_LEFT_MENU: echo 'Left menu trang chủ';
+				break;
+				case Category::GROUP_USER_FOOTER_MENU: echo 'Footer menu trang chủ';
+				break;
+				case Category::GROUP_USER_DISEASE: echo 'Danh mục nhóm bệnh và bác sĩ';
 				break;
 				case Category::GROUP_ROOT: echo "Danh mục gốc";
 				break;
@@ -58,7 +74,6 @@ $cs->registerCssFile(Yii::app()->request->getBaseUrl(true).'/css/admin/sprite.cs
 				break;
 				default: echo 'Danh mục';
 				break;
-				
 			}
 			?>
 					</span></a></li>					
@@ -72,7 +87,15 @@ $cs->registerCssFile(Yii::app()->request->getBaseUrl(true).'/css/admin/sprite.cs
 			switch ($group){
 				case Category::GROUP_ADMIN_MENU: $form='_form_menu';
 				break;
-				case Category::GROUP_USER_MENU: $form='_form_menu';
+				case Category::GROUP_USER_TOP_MENU: $form='_form_menu';
+				break;
+				case Category::GROUP_USER_MAIN_MENU: $form='_form_menu';
+				break;
+				case Category::GROUP_USER_LEFT_MENU: $form='_form_menu';
+				break;
+				case Category::GROUP_USER_FOOTER_MENU: $form='_form_menu';
+				break;
+				case Category::GROUP_USER_DISEASE: $form='_form_disease';
 				break;
 				case Category::GROUP_ROOT: $form="_form_root";
 				break;

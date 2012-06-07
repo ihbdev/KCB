@@ -19,6 +19,7 @@ return array(
 		'application.components.core.*',
 		'application.components.*',
 		'application.models.*',
+		'application.extensions.*',
 	),
 	'defaultController'=>'site/home',
 	'modules'=>array(

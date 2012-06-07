@@ -40,7 +40,9 @@ class Image extends CActiveRecord
 	 */
 	static $config_thumb_size=array(
 		'News'=>array(
-			'introimage'=>array('h'=>100,'w'=>130)
+			'introimage'=>array('h'=>157,'w'=>157),
+			'introimage_big'=>array('h'=>250,'w'=>307),
+			'thumb_news'=>array('h'=>67,'w'=>100),
 		),
 		'Product'=>array(
 			'introimage'=>array('h'=>144,'w'=>137),
@@ -57,14 +59,16 @@ class Image extends CActiveRecord
 		),
 		'Banner'=>array(
 			'thumb_upload'=>array('h'=>100,'w'=>'100'),
-			'thumb_headline'=>array('h'=>100,'w'=>260),
-			'headline'=>array('h'=>295,'w'=>780),
+			'thumb_headline'=>array('h'=>100,'w'=>250),
+			'headline'=>array('h'=>231,'w'=>533),
 			'thumb_top'=>array('h'=>100,'w'=>260),
 			'top'=>array('h'=>295,'w'=>780),
-			'left'=>array('h'=>252,'w'=>210),
-			'thumb_left'=>array('h'=>252,'w'=>210),
-			'right'=>array('h'=>450,'w'=>300),
-			'thumb_right'=>array('h'=>450,'w'=>300)
+			'left'=>array('h'=>314,'w'=>210),
+			'thumb_left'=>array('h'=>314,'w'=>210),
+			'right'=>array('h'=>276,'w'=>160),
+			'thumb_right'=>array('h'=>276,'w'=>160),
+			'service'=>array('h'=>123,'w'=>177),
+			'thumb_service'=>array('h'=>123,'w'=>177)
 		),
 		'GalleryVideo'=>array(
 			'thumb_upload'=>array('h'=>100,'w'=>'100'),

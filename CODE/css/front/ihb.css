@@ -1,0 +1,142 @@
+div.error label:first-child,
+label.error,
+span.error
+{
+	color: #C00;
+}
+
+div.error input,
+div.error textarea,
+div.error select,
+input.error,
+textarea.error,
+select.error
+{
+	background: #FEE;
+	border-color: #C00;
+}
+
+div.success input,
+div.success textarea,
+div.success select,
+input.success,
+textarea.success,
+select.success
+{
+	background: #E6EFC2;
+	border-color: #C6D880;
+}
+
+
+.errorSummary
+{
+	border: 2px solid #C00;
+	padding: 7px 7px 12px 7px;
+	margin: 0 0 20px 0;
+	background: #FEE;
+	font-size: 0.9em;
+}
+
+.errorMessage
+{
+	color: red;
+	font-size: 0.9em;
+}
+
+.errorSummary p
+{
+	margin: 0;
+	padding: 5px;
+}
+
+.errorSummary ul
+{
+	margin: 0;
+	padding: 0 0 0 20px;
+}
+div.flash-error, div.flash-notice, div.flash-success
+{
+	padding:.8em;
+	margin-bottom:1em;
+	border:2px solid #ddd;
+}
+
+div.flash-error
+{
+	background:#FBE3E4;
+	color:#8a1f11;
+	border-color:#FBC2C4;
+}
+
+div.flash-notice
+{
+	background:#FFF6BF;
+	color:#514721;
+	border-color:#FFD324;
+}
+
+div.flash-success
+{
+	background:#E6EFC2;
+	color:#264409;
+	border-color:#C6D880;
+}
+
+div.flash-error a
+{
+	color:#8a1f11;
+}
+
+div.flash-notice a
+{
+	color:#514721;
+}
+
+div.flash-success a
+{
+	color:#264409;
+}
+span.required
+{
+	color: red;
+}
+.pager {
+padding:5px 0px;
+text-align:right;
+float:right;
+}
+.pager ul {
+list-style-image:inherit;
+list-style-position:outside;
+list-style:none;
+margin:0px;
+padding:0px;
+}
+.pager li {
+float:left;
+padding-left:10px;
+}
+.pager a {
+padding:0px 6px;
+background:#fff;
+border:1px solid #ddd;
+display:block;
+color:#333;
+line-height:20px;
+height:20px;
+border-radius:3px;
+font-weight:normal;
+}
+.pager a:hover, .pager .pager-active {
+background:#e6b14c;
+border:1px solid #ddd;
+color:#fff !important;
+text-decoration:none;
+}
+.pager .selected a {
+    background: none repeat scroll 0 0 #3157A6 !important;
+    border: 1px solid #3E66B7;
+    color: #FFFFFF;
+    pointer-events: none;
+    cursor: default;
+}

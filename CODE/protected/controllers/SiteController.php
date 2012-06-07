@@ -12,6 +12,20 @@ class SiteController extends Controller
 		parent::init();
 		Yii::app()->clientScript->scriptMap['jquery.js'] = false;
 		Yii::app()->clientScript->scriptMap['jquery.min.js'] = false;
+		Yii::app()->session['book-online']=NULL;
+		/**
+		 * This is the action for register online
+		 */
+		$model=new Order('create');
+		if(isset($_POST['Order'])){
+			$model->attributes=$_POST['Order'];
+			$time = $_POST['Order']['date'].$_POST['Order']['hour'].':'.$_POST['Order']['min'];
+			$model->booked_date =  strtotime(str_replace("/", "-", $time));
+			if($model->fullname !='Họ và tên' && $model->phone!='Số điện thoại')
+				if($model->save())
+					//Yii::app()->user->setFlash('success', Language::t('Đăng ký thành công'));
+					Yii::app()->session['book-online'] ='<div class="flash-success" style="height:20px;padding:2px;margin-bottom:1px;">Đăng ký thành công</div>';
+		}
 	}
 	/**
 	 * This is the action to handle external exceptions.
@@ -57,7 +71,7 @@ class SiteController extends Controller
 		$criteria->limit=Setting::s('SIZE_HOME_NEWS','News');
 		$list_news=News::model()->findAll($criteria);
 		$this->render( 'home' ,array('list_news'=>$list_news,'list_product'=>$list_product));
-	}	
+	}
 	/**
 	 * This is the action to handle view search page
 	 */

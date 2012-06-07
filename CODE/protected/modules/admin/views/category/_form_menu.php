@@ -9,7 +9,7 @@
                         	<?php echo $form->textField($model,'name',array('style'=>'width:300px;','maxlength'=>'256')); ?>
                    			<?php echo $form->error($model, 'name'); ?>
                     	</li>
-                    </div>                           
+                    </div>
                     <div class="row">
                     <li>
                         <?php echo $form->labelEx($model,'parent_id',array('style'=>'width:200px;')); ?>

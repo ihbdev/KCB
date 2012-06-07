@@ -8,7 +8,10 @@
 									break;	
 								case Banner::CODE_RIGHT:
 									$type_image="thumb_right";
-									break;							
+									break;
+								case Banner::CODE_SERVICE:
+									$type_image="thumb_service";
+									break;
 							}
 ?>
 <!--begin inside content-->

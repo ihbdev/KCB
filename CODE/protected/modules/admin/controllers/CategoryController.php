@@ -80,9 +80,29 @@ class CategoryController extends Controller
 				$form='_form_menu';
 				break;
 				case 
-				Category::GROUP_USER_MENU: 
+				Category::GROUP_USER_TOP_MENU: 
 				$model->scenario='menu';	
 				$form='_form_menu';
+				break;
+				case
+				Category::GROUP_USER_MAIN_MENU:
+				$model->scenario='menu';	
+				$form='_form_menu';
+				break;
+				case
+				Category::GROUP_USER_LEFT_MENU:
+				$model->scenario='menu';	
+				$form='_form_menu';
+				break;
+				case
+				Category::GROUP_USER_FOOTER_MENU:
+				$model->scenario='menu';	
+				$form='_form_menu';
+				break;
+				case
+				Category::GROUP_USER_DISEASE:
+				$model->scenario='diease';	
+				$form='_form_disease';
 				break;
 				case Category::GROUP_ROOT: 
 				$model->scenario='root';	
@@ -149,9 +169,29 @@ class CategoryController extends Controller
 				$form='_form_menu';
 				break;
 				case 
-				Category::GROUP_USER_MENU: 
+				Category::GROUP_USER_TOP_MENU: 
 				$model->scenario='menu';	
 				$form='_form_menu';
+				break;
+				case
+				Category::GROUP_USER_MAIN_MENU:
+				$model->scenario='menu';	
+				$form='_form_menu';
+				break;
+				case
+				Category::GROUP_USER_LEFT_MENU:
+				$model->scenario='menu';	
+				$form='_form_menu';
+				break;
+				case
+				Category::GROUP_USER_FOOTER_MENU:
+				$model->scenario='menu';	
+				$form='_form_menu';
+				break;
+				case
+				Category::GROUP_USER_DISEASE:
+				$model->scenario='diease';	
+				$form='_form_disease';
 				break;
 				case Category::GROUP_ROOT: 
 				$model->scenario='root';	
@@ -217,9 +257,24 @@ class CategoryController extends Controller
 				$form='_form_menu';
 				break;
 				case 
-				Category::GROUP_USER_MENU: 
+				Category::GROUP_USER_TOP_MENU: 
 				$model->scenario='menu';	
 				$form='_form_menu';
+				break;
+				case
+				Category::GROUP_USER_MAIN_MENU:
+				$model->scenario='menu';	
+				$form='_form_menu';
+				break;
+				case
+				Category::GROUP_USER_LEFT_MENU:
+				$model->scenario='menu';	
+				$form='_form_menu';
+				break;
+				case
+				Category::GROUP_USER_DISEASE:
+				$model->scenario='diease';	
+				$form='_form_disease';
 				break;
 				case Category::GROUP_ROOT: 
 				$model->scenario='root';	
@@ -255,7 +310,6 @@ class CategoryController extends Controller
 				$model->scenario='manufacturer';	
 				$form="_form_manufacturer";
 				break;
-				
 			}
 			switch ($model->checkDelete($id))	{
 				case Category::DELETE_OK:		
@@ -328,8 +382,23 @@ class CategoryController extends Controller
 				$model->scenario='menu';	
 				break;
 				case 
-				Category::GROUP_USER_MENU: 
+				Category::GROUP_USER_TOP_MENU: 
 				$model->scenario='menu';	
+				break;
+				case
+				Category::GROUP_USER_MAIN_MENU:
+				$model->scenario='menu';	
+				$form='_form_menu';
+				break;
+				case
+				Category::GROUP_USER_LEFT_MENU:
+				$model->scenario='menu';	
+				$form='_form_menu';
+				break;
+				case
+				Category::GROUP_USER_DISEASE:
+				$model->scenario='diease';	
+				$form='_form_disease';
 				break;
 				case Category::GROUP_ROOT: 
 				$model->scenario='root';	
@@ -379,13 +448,28 @@ class CategoryController extends Controller
 				$model->scenario='menu';	
 				break;
 				case 
-				Category::GROUP_USER_MENU: 
+				Category::GROUP_USER_TOP_MENU: 
 				$model->scenario='menu';	
+				break;
+				case
+				Category::GROUP_USER_MAIN_MENU:
+				$model->scenario='menu';	
+				$form='_form_menu';
+				break;
+				case
+				Category::GROUP_USER_LEFT_MENU:
+				$model->scenario='menu';	
+				$form='_form_menu';
+				break;
+				case
+				Category::GROUP_USER_DISEASE:
+				$model->scenario='diease';	
+				$form='_form_disease';
 				break;
 				case Category::GROUP_ROOT: 
 				$model->scenario='root';	
 				break;
-				case				
+				case
 				Category::GROUP_NEWS: 
 				$model->scenario='news';	
 				break;
@@ -395,9 +479,9 @@ class CategoryController extends Controller
 				break;
 				case				
 				Category::GROUP_ALBUM: 
-				$model->scenario='album';	
+				$model->scenario='album';
 				break;
-				case				
+				case
 				Category::GROUP_STATICPAGE: 
 				$model->scenario='staticPage';	
 				break;
@@ -443,9 +527,29 @@ class CategoryController extends Controller
 				$form='_form_menu';
 				break;
 				case 
-				Category::GROUP_USER_MENU: 
+				Category::GROUP_USER_TOP_MENU: 
 				$model->scenario='menu';	
 				$form='_form_menu';
+				break;
+				case
+				Category::GROUP_USER_MAIN_MENU:
+				$model->scenario='menu';	
+				$form='_form_menu';
+				break;
+				case
+				Category::GROUP_USER_LEFT_MENU:
+				$model->scenario='menu';	
+				$form='_form_menu';
+				break;
+				case
+				Category::GROUP_USER_FOOTER_MENU:
+				$model->scenario='menu';	
+				$form='_form_menu';
+				break;
+				case
+				Category::GROUP_USER_DISEASE:
+				$model->scenario='diease';	
+				$form='_form_disease';
 				break;
 				case Category::GROUP_ROOT: 
 				$model->scenario='root';	

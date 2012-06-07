@@ -35,18 +35,18 @@
 /* Caption styles */
 .nivo-caption {
 	position:absolute;
-	left:0px;
-	bottom:0px;
-	background:#000;
+	right:0px;
+	bottom:56px;
 	color:#fff;
-	opacity:0.8; /* Overridden by captionOpacity setting */
-	width:100%;
+	width:165px;
 	z-index:8;
-	padding:7px 0;
+	overflow:hidden;
+	height:20px;
 }
 .nivo-caption p {
-	padding:5px;
 	margin:0;
+	font-size:14px;
+	font-weight:bold;
 }
 .nivo-caption a {
 	display:inline !important;
@@ -91,11 +91,17 @@
 	border:0;
 	display:block;
 }
+
 .theme-default .nivo-controlNav {
 	position:absolute;
 	bottom:7px;
 	text-align:center;
-	right:10px;
+	right:5px;
+	background:url(../../images/front/nivo-controlNav.png) top left no-repeat;
+	z-index:7;
+	height:79px;
+	padding-left:38px;
+	min-width:150px;
 }
 .theme-default .nivo-controlNav a {
 	display:block;
@@ -105,6 +111,7 @@
 	text-indent:-9999px;
 	border:0;
 	margin-right:3px;
+	margin-top:38px;
 	float:left;
 }
 .theme-default .nivo-controlNav a.active {

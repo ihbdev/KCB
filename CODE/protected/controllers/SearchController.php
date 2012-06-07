@@ -32,5 +32,18 @@ class SearchController extends Controller
 		$criteria->order = "id DESC";
 		$result=new CActiveDataProvider ( 'Product', array ('criteria' => $criteria, 'pagination' => array ('pageSize' => Setting::s('SEARCH_PAGE_SIZE','Product' ) ) ) );
 		$this->render( 'product',array('result'=>$result) );
+	}
+	public function actionNews()
+	{
+		$search=new SearchForm();
+		$criteria = new CDbCriteria ();
+		if(isset($_POST['SearchForm'])){
+			$search->attributes=$_POST['SearchForm'];
+			$criteria->compare ( 'title', $search->name, true );
+			$criteria->compare ( 'catid', $search->catid );
+		}
+		$criteria->order = "id DESC";
+		$result=new CActiveDataProvider ( 'News', array ('criteria' => $criteria, 'pagination' => array ('pageSize' => Setting::s('SEARCH_PAGE_SIZE','News' ) ) ) );
+		$this->render( 'news',array('result'=>$result) );
 	}		
 }

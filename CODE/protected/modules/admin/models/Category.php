@@ -29,7 +29,14 @@ class Category extends CActiveRecord
 	 */
 	const GROUP_ROOT=0;
 	const GROUP_ADMIN_MENU=1;
-	const GROUP_USER_MENU=2;
+
+	const GROUP_USER_TOP_MENU=2;
+	const GROUP_USER_MAIN_MENU=109;
+	const GROUP_USER_LEFT_MENU=108;
+	const GROUP_USER_FOOTER_MENU=124;
+
+	const GROUP_USER_DISEASE=132;
+
 	const GROUP_STATICPAGE=3;
 	const GROUP_NEWS=4;
 	const GROUP_PRODUCT=5;
@@ -160,7 +167,7 @@ class Category extends CActiveRecord
 		while ($check){
 			$current=Category::model()->findByPk($current_id);
 			$bread_crumb[]=$current_id;
-			if(in_array($current->parent_id,array(Category::GROUP_NEWS,Category::GROUP_PRODUCT,Category::GROUP_STATICPAGE,Category::GROUP_ALBUM,Category::GROUP_GALLERYVIDEO,Category::GROUP_ADMIN_MENU,Category::GROUP_MANUFACTURER,Category::GROUP_USER_MENU))){
+			if(in_array($current->parent_id,array(Category::GROUP_NEWS,Category::GROUP_PRODUCT,Category::GROUP_STATICPAGE,Category::GROUP_ALBUM,Category::GROUP_GALLERYVIDEO,Category::GROUP_ADMIN_MENU,Category::GROUP_MANUFACTURER,Category::GROUP_USER_TOP_MENU,Category::GROUP_USER_MAIN_MENU,Category::GROUP_USER_LEFT_MENU,Category::GROUP_USER_FOOTER_MENU,Category::GROUP_USER_DISEASE))){
 				$check=false;
 			}
 			else 
@@ -178,7 +185,7 @@ class Category extends CActiveRecord
 		$current_id=$this->id;
 		while ($check){
 			$current=Category::model()->findByPk($current_id);
-			if(in_array($current->parent_id,array(Category::GROUP_ADMIN_MENU,Category::GROUP_USER_MENU,Category::GROUP_ALBUM,Category::GROUP_GALLERYVIDEO,Category::GROUP_MANUFACTURER,Category::GROUP_NEWS,Category::GROUP_STATICPAGE,Category::GROUP_PRODUCT)))
+			if(in_array($current->parent_id,array(Category::GROUP_ADMIN_MENU,Category::GROUP_USER_TOP_MENU,Category::GROUP_USER_MAIN_MENU,Category::GROUP_USER_LEFT_MENU,Category::GROUP_USER_DISEASE,Category::GROUP_USER_FOOTER_MENU,Category::GROUP_ALBUM,Category::GROUP_GALLERYVIDEO,Category::GROUP_MANUFACTURER,Category::GROUP_NEWS,Category::GROUP_STATICPAGE,Category::GROUP_PRODUCT)))
 			{
 				$check=false;
 			}
@@ -273,7 +280,7 @@ class Category extends CActiveRecord
 		foreach ($list_category as $category){
 			$category->group=$this->group;
 			//Get route and params if group is menu
-			if($this->group==Category::GROUP_ADMIN_MENU || $this->group==Category::GROUP_USER_MENU){
+			if($this->group==Category::GROUP_ADMIN_MENU || $this->group==Category::GROUP_USER_TOP_MENU || $this->group==Category::GROUP_USER_LEFT_MENU || $this->group==Category::GROUP_USER_MAIN_MENU || $this->group==Category::GROUP_USER_FOOTER_MENU || $this->group==Category::GROUP_USER_DISEASE){
 				$this->tmp_list[$category->id]=array('level'=>$new_level,'name'=>$category->name,'url'=>$category->url,'root'=>$category->root);
 			}
 			elseif(in_array($this->group,array(Category::GROUP_NEWS,Category::GROUP_PRODUCT,Category::GROUP_STATICPAGE,Category::GROUP_ALBUM,Category::GROUP_GALLERYVIDEO))){
@@ -628,7 +635,7 @@ class Category extends CActiveRecord
 	public function codeUrl($type,$value=array()){
 		switch ($type) {
 			case 'controller': 
-					return array('product'=>'Sản phẩm','news'=>'Tin tức','staticPage'=>'Trang tĩnh','album'=>'Album','galleryVideo'=>'Video','config'=>'Hệ thống','language'=>'Ngôn ngữ','setting'=>'Cấu hình','order'=>'Đơn hàng','user'=>'User','qa'=>'Hỏi đáp','banner'=>'Banner','contact'=>'Liên hệ');				
+					return array('product'=>'Sản phẩm','news'=>'Tin tức','staticPage'=>'Trang tĩnh','album'=>'Album','galleryVideo'=>'Video','config'=>'Hệ thống','language'=>'Ngôn ngữ','setting'=>'Cấu hình','order'=>'Đăng ký khám bệnh','user'=>'User','qa'=>'Hỏi đáp','banner'=>'Banner','contact'=>'Liên hệ');				
 				break;
 			case 'action':
 				switch ($value['controller']) {	
@@ -817,8 +824,21 @@ class Category extends CActiveRecord
 						$value=json_encode(array('group'=>Category::GROUP_ADMIN_MENU));
 						$result[$value]='Quản lý menu trang quản trị';
 						//Config user menu
-						$value=json_encode(array('group'=>Category::GROUP_USER_MENU));
-						$result[$value]='Quản lý menu trang front end';
+						$value=json_encode(array('group'=>Category::GROUP_USER_TOP_MENU));
+						$result[$value]='Quản lý top menu';
+
+						$value=json_encode(array('group'=>Category::GROUP_USER_LEFT_MENU));
+						$result[$value]='Quản lý left menu';
+
+						$value=json_encode(array('group'=>Category::GROUP_USER_MAIN_MENU));
+						$result[$value]='Quản lý main menu';
+
+						$value=json_encode(array('group'=>Category::GROUP_USER_FOOTER_MENU));
+						$result[$value]='Quản lý footer menu';
+
+						$value=json_encode(array('group'=>Category::GROUP_USER_DISEASE));
+						$result[$value]='Quản lý nhóm bệnh';
+
 						return $result;
 					default:
 						return $result;
@@ -919,7 +939,7 @@ class Category extends CActiveRecord
 	 * @return string, the url of menu
 	 */
 	public function getUrl() {
-		if ($this->group == Category::GROUP_ADMIN_MENU || $this->group == Category::GROUP_USER_MENU) {
+		if ($this->group == Category::GROUP_ADMIN_MENU || $this->group == Category::GROUP_USER_TOP_MENU || $this->group == Category::GROUP_USER_MAIN_MENU || $this->group == Category::GROUP_USER_LEFT_MENU || $this->group == Category::GROUP_USER_FOOTER_MENU || $this->group == Category::GROUP_USER_DISEASE) {
 			$config = array (
 					'news' => array (
 						'manager_category' => array ('group' => Category::GROUP_NEWS),

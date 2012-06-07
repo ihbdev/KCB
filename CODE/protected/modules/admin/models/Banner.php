@@ -44,6 +44,7 @@ class Banner extends CActiveRecord
 	const CODE_RIGHT=6;
 	const CODE_HEADLINE=7;
 	const CODE_LEFT=5;
+	const CODE_SERVICE=48;
 	
 	/**
 	 * @var string old images of the banner	 

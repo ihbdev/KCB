@@ -2,7 +2,7 @@
 	<div class="folder top">
 		<!--begin title-->
 		<div class="folder-header">
-			<h1>quản trị đơn hàng</h1>
+			<h1>quản trị đăng ký khám bệnh</h1>
 			<div class="header-menu">
 				<ul>
 					<li class="ex-show"><a class="activities-icon" href=""><span>Danh sách</span></a></li>
@@ -49,7 +49,7 @@
                  <!--begin right content-->
                 <div class="fl" style="width:480px;">
                     <ul>
-                    							<!-- filter by date -->
+                    <!-- filter by date -->
                         <li>
                         <label>Từ Ngày</label>
     					<?php $this->widget('zii.widgets.jui.CJuiDatePicker',
@@ -97,24 +97,33 @@
     				array(
 						'name'=>'fullname',
 						'headerHtmlOptions'=>array('width'=>'10%','class'=>'table-title'),		
-					), 
-					array(
-						'header'=>'Tổng giá trị',
-						'type'=>'raw',
-						'value'=>'$data->order_value',
-						'headerHtmlOptions'=>array('width'=>'15%','class'=>'table-title'),		
-					),	
-					array(
-						'header'=>'Chi tiết',
-						'type'=>'raw',
-						'value'=>'$data->order_content',
-						'headerHtmlOptions'=>array('width'=>'35%','class'=>'table-title'),		
-					),							
+					),
+    				array(
+						'name'=>'phone',
+						'headerHtmlOptions'=>array('width'=>'10%','class'=>'table-title'),		
+					),
+    				array(
+						'name'=>'email',
+						'headerHtmlOptions'=>array('width'=>'10%','class'=>'table-title'),		
+					),
+    				array(
+						'name'=>'disease',
+						'headerHtmlOptions'=>array('width'=>'10%','class'=>'table-title'),		
+					),
+    				array(
+						'name'=>'doctor',
+						'headerHtmlOptions'=>array('width'=>'10%','class'=>'table-title'),		
+					),
 					array(
 						'name'=>'created_date',
 						'value'=>'date("H:i d/m/Y",$data->created_date)',
 						'headerHtmlOptions'=>array('width'=>'15%','class'=>'table-title'),		
-					), 		
+					),
+					array(
+						'header'=>'Ngày đăng ký khám',
+						'value'=>'date("H:i d/m/Y",$data->booked_date)',
+						'headerHtmlOptions'=>array('width'=>'15%','class'=>'table-title'),		
+					), 
 					array(
 						'header'=>'Xử lý',
 						'class'=>'iPhoenixButtonColumn',
