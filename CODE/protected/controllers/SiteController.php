@@ -99,5 +99,31 @@ class SiteController extends Controller
 	{
 		Yii::app()->session['language']=$language;
 		Yii::app()->request->redirect(Yii::app()->getRequest()->getUrlReferrer());
-	}	
+	}
+
+	/**
+	 * This is action for handle dropdownlist dependence
+	 */
+	public function actionDynamicdoctor()
+	{
+	//please enter current controller name because yii send multi dim array
+		$current_cat = $_POST['Order']['disease'];
+		$list_doctor = Yii::app()->session['doctor'];
+
+		foreach($list_doctor as $cat=>$doctor)
+		{
+			if($current_cat==$cat) {
+				foreach($doctor as $id=>$name) $doctors[]=$name;
+			}
+		}
+		if(sizeof($doctors)){
+		    foreach($doctors as $value=>$name)
+		    {
+		        echo CHtml::tag('option',
+					array('value'=>$value),CHtml::encode($name),true);
+		    }
+		}
+		else echo CHtml::tag('option',
+					array('value'=>'none'),CHtml::encode('none'),true);
+	}
 }

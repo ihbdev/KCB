@@ -51,7 +51,8 @@ class Image extends CActiveRecord
 			'thumb_otherimage'=>array('h'=>117,'w'=>191),
 		),
 		'StaticPage'=>array(
-			'introimage'=>array('h'=>100,'w'=>130)
+			'introimage'=>array('h'=>157,'w'=>157),
+			'introimage_big'=>array('h'=>250,'w'=>307),
 		),
 		'Album'=>array(
 			'thumb_upload'=>array('h'=>100,'w'=>125),

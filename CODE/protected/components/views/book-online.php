@@ -11,17 +11,19 @@
 				$list_disease[0] = 'Chọn nhóm bệnh';
 				$list_doctor[0] = 'Chọn bác sĩ';
 
-				$index = 0;
 				foreach($list as $list_cat)
 				{
-					if($list_cat['level']==1) {
-						$list_disease[$list_cat['name']]=$list_cat['name'];
-						$index++;
+					if($list_cat['level'] == 1) {
+						$list_disease[$list_cat['name']] = $list_cat['name'];
+						$cat_name = $list_cat['name'];;
 					}
-					if($list_cat['level']==2) $list_doctor[$index][$list_cat['name']]=$list_cat['name'];
+					if($list_cat['level']==2) {
+						$list_doctor[$cat_name][$list_cat['name']] = $list_cat['name'];
+						$list_doctor_[$cat_name][] = $list_cat['name'];
+					}
 				}
-
-				$model=new Order('create');
+				Yii::app()->session['doctor'] = $list_doctor_;
+				$model = new Order('create');
 			?>
 			<div class="contact-online">
 			<?php $form=$this->beginWidget('CActiveForm', array('method'=>'post','enableAjaxValidation'=>false,'htmlOptions'=>array('class'=>'contact-form form','style'=>'display:block'))); ?>
@@ -43,11 +45,18 @@
 					<?php echo $form->error($model, 'email'); ?>	
 				</div>
 				<div class="row fix-inline">
-					<?php echo $form->dropDownList($model,'disease',$list_disease);?>	
+					<?php echo $form->dropDownList($model,'disease',$list_disease,
+						array(
+							'ajax' => array(
+							'type'=>'POST', //request type
+							'url'=>Yii::app()->createUrl('site/Dynamicdoctor'), //url to call.
+							'update'=>'#Order_doctor', //selector to update
+							))
+					);?>
 					<?php echo $form->error($model, 'disease'); ?>	
 				</div>
 				<div class="row fix-inline">
-					<?php echo $form->dropDownList($model,'doctor',$list_doctor);?>	
+					<?php echo $form->dropDownList($model,'doctor',array('0'=>'Chọn bác sĩ'));?>	
 					<?php echo $form->error($model, 'doctor'); ?>	
 				</div>
 
